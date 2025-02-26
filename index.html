@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>password manager</title>
+		<link rel="stylesheet" type="text/css" href="dark.css">
+		<link rel="stylesheet" type="text/css" href="left-right.css" id="cssLink">
+		<script src="password-manager.js"></script>
+		<script src="password-generator.js"></script>
+		<script src="layout.js"></script>
+	</head>
+	<body onresize="widthCheck()">
+		<h1>Password manager</h1>
+		<main>
+			<div id="mainDiv">
+				<div id="manager" class="structureDiv">
+					<table id="mainTable">
+						<tr>
+							<th>username</th>
+							<th>password</th>
+							<th>url</th>
+							<th>edit</th>
+						</tr>
+					</table>
+					<div id="saveControls">
+						<button type="button" onclick="createRow()">New entry</button>
+						<button type="button" onclick="save()">Save</button>
+						<button type="button" onclick="load()">Load</button>
+						<input type="password" id="passwordBox">
+					</div>
+				</div>
+				<div id="generator" class="structureDiv">
+					<form id="generatorForm">
+						<input type="text" id="generatorBox" name="generatorBox">
+						<br>
+						<input type="range" min="1" max="128" value="128" id="lengthSlider" name="lengthSlider">
+						<label for="lengthSlider" id="sliderLabel">128 characters</label>
+						<br>
+						<input type="checkbox" id="lowercaseToggle" name="lowercaseToggle" checked="true">
+						<label for="lowercaseToggle">lower</label>
+						<input type="checkbox" id="uppercaseToggle" name="uppercaseToggle" checked="true">
+						<label for="uppercaseToggle">UPPER</label>
+						<input type="checkbox" id="numberToggle" name="numberToggle" checked="true">
+						<label for="numberToggle">12345</label>
+						<input type="checkbox" id="specialToggle" name="specialToggle" checked="true">
+						<label for="specialToggle">$*@#!</label>
+						<input type="checkbox" id="extendedToggle" name="extendedToggle" checked="true">
+						<label for="extendedToggle">Êxtrá</label>
+						<br>
+						<input type="button" value="generate" onclick="generatePassword()">
+					</form>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+.structureDiv {
+	height:100%;
+	width:49%;
+	position:fixed;
+	border-style:solid;
+	padding-top:10px;
+}
+
+#generator {
+border-right:none;
+right:0;
+}
+
+#manager {
+border-left:none;
+left:0;
+}
