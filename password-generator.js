@@ -32,3 +32,23 @@ function generatePassword() {
 	}
 	document.getElementById("generatorBox").value = password;
 }
+
+function checkQuality() {
+	table = document.getElementById("mainTable");
+	textBox = document.getElementById("qualityResults");
+	text = "";
+	textBox.innerHTML = "";
+	for(let i = 1; i < table.rows.length; i++) {
+		password = table.rows[i].cells[1].innerText;
+		if(password === "password") {
+			text = text + `password for ${table.rows[i].cells[2].innerText} is still set to the default<br>`;
+		}
+		if(password.length < 15) {
+			text = text + `password for ${table.rows[i].cells[2].innerText} is too short<br>`;
+		}
+		if(Array.from(new Set(password)).length < (password.length / 3)) {
+			text = text + `password for ${table.rows[i].cells[2].innerText} has poor character variety<br>`;
+		}
+	}
+	textBox.innerHTML = text;
+}

@@ -1,3 +1,11 @@
+class PasswordTable {
+	constructor() {
+		this.entries = [[[]]];
+		for()
+	}
+
+}
+
 function editRow(id) {
 	var row = document.getElementById(`row ${id}`);
 	var username = row.cells[0].innerHTML;
@@ -19,6 +27,7 @@ function submitRow(id) {
 	var edit = row.insertCell(3);
 	username.innerHTML = usernameValue;
 	password.innerHTML = passwordValue;
+	password.classList.add("password");
 	url.innerHTML = `<a href=\"${urlValue}\">${urlValue}</a>`;
 	edit.innerHTML = `<button type=\"button\" onclick=\"editRow(${id})\">edit</button>`;
 }
@@ -36,6 +45,10 @@ function createRow() {
 	url.innerHTML = "<a href=\"https://example.com\">https://example.com<a>";
 	edit.innerHTML = `<button type=\"button\" onclick=\"editRow(${id})\">edit</button>`;
 	editRow(id);
+}
+
+function createTableObject() {
+
 }
 
 function save() {

@@ -66,6 +66,15 @@ input[type=range]::-moz-range-thumb {
 	background-color:lime;
 }
 
+.password {
+	color:lime;
+	background-color:lime;
+}
+
+.password:hover {
+	background-color:black;
+}
+
 #saveControls {
 	padding-left:2.5%;
 	padding-top:10px;
@@ -81,4 +90,11 @@ input[type=range]::-moz-range-thumb {
 
 #generatorBox {
 	width:80%;
+}
+
+#qualityTester {
+	text-align: center;
+	width:90%;
+	margin: 0 auto;
+	margin-top:10px;
 }
