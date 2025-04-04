@@ -1,2 +1,2 @@
 # 1004-webite
-web based password manager
+A web based password manager with local saves
