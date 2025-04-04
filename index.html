@@ -22,10 +22,18 @@
 							<th>edit</th>
 						</tr>
 					</table>
+					<div id="folderControls">
+						<select id="tableDropdown" onchange="swapTable()">
+							<option value="0">default<option>
+						</select>
+						<button type="button" onclick="createTable()">Create table</button>
+						<input type="text" id="newTableName">
+					</div>
 					<div id="saveControls">
 						<button type="button" onclick="createRow()">New entry</button>
 						<button type="button" onclick="save()">Save</button>
 						<button type="button" onclick="load()">Load</button>
+						<input type="file" id="fileSelection">
 						<input type="password" id="passwordBox">
 					</div>
 				</div>
@@ -47,7 +55,7 @@
 						<input type="checkbox" id="extendedToggle" name="extendedToggle" checked="true">
 						<label for="extendedToggle">Êxtrá</label>
 						<br>
-						<input type="button" value="generate" onclick="generatePassword()">
+						<input type="button" value="Generate" onclick="generatePassword()">
 					</form>
 					<div id="qualityTester">
 						<button type="button" onclick="checkQuality()">Check password quality</button>

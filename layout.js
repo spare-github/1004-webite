@@ -11,4 +11,6 @@ function widthCheck() {
 
 window.onload = function() {
 	widthCheck();
+	initSlider();
+	initTable();
 }

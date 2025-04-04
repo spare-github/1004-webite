@@ -1,4 +1,4 @@
-window.onload = function() {
+function initSlider() {
 	var slider = document.getElementById("lengthSlider");
 	slider.oninput = function() {
 		document.getElementById("sliderLabel").innerHTML = `${document.getElementById("lengthSlider").value} characters`;
@@ -34,11 +34,11 @@ function generatePassword() {
 }
 
 function checkQuality() {
-	table = document.getElementById("mainTable");
-	textBox = document.getElementById("qualityResults");
-	text = "";
+	var table = document.getElementById("mainTable");
+	var textBox = document.getElementById("qualityResults");
+	var text = "";
 	textBox.innerHTML = "";
-	for(let i = 1; i < table.rows.length; i++) {
+	for(var i = 1; i < table.rows.length; i++) {
 		password = table.rows[i].cells[1].innerText;
 		if(password === "password") {
 			text = text + `password for ${table.rows[i].cells[2].innerText} is still set to the default<br>`;
@@ -46,7 +46,7 @@ function checkQuality() {
 		if(password.length < 15) {
 			text = text + `password for ${table.rows[i].cells[2].innerText} is too short<br>`;
 		}
-		if(Array.from(new Set(password)).length < (password.length / 3)) {
+		if(Array.from(new Set(password)).length < (password.length / 2)) {
 			text = text + `password for ${table.rows[i].cells[2].innerText} has poor character variety<br>`;
 		}
 	}

@@ -22,6 +22,20 @@ a {
 	color:cyan
 }
 
+select {
+	background-color:black;
+	color:lime;
+	border-style:solid;
+	border-color:cyan;
+}
+
+select:hover {
+	background-color:lime;
+	color:black;
+	border-style:solid;
+	border-color:cyan;
+}
+
 input[type=text], input[type=password] {
 	border-style:solid;
 	border-color:lime;
@@ -41,14 +55,14 @@ input[type=text]:focus, input[type=password]:focus {
 	border-bottom-width:medium;
 }
 
-button[type=button], input[type=button], input[type=submit] {
+button[type=button], input[type=button], input[type=submit], ::file-selector-button {
 	background-color:black;
 	color:lime;
 	border-style:solid;
 	border-color:cyan;
 }
 
-button[type=button]:hover, input[type=button]:hover, input[type=submit]:hover {
+button[type=button]:hover, input[type=button]:hover, input[type=submit]:hover, ::file-selector-button:hover{
 	background-color:lime;
 	color:black;
 	border-style:solid;
@@ -97,4 +111,9 @@ input[type=range]::-moz-range-thumb {
 	width:90%;
 	margin: 0 auto;
 	margin-top:10px;
+}
+
+#folderControls {
+	padding-left:2.5%;
+	padding-top:10px;
 }
